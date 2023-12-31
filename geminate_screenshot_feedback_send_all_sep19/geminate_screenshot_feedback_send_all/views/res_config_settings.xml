@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_form_3cx" model="ir.ui.view">
+        <field name="name">res.config.settings.form.view.3cx</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="Feedback Box" string="Feedback Box"
+                    data-key="geminate_screenshot_feedback_send_all">
+                    <h2>Feedback Box Option(s)</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <div class="content-group">
+                                    <div class="mt16 row">
+                                        <div class="col-12 mt-1 mb-1 text-white bg-dark" >Main Configuration</div>
+                                        <label for="screenshot_enable" class="col-6 o_light_label" />
+                                        <field name="screenshot_enable" style="width: 10%" />
+                                        <label for="screenshot_initial_box" class="col-6 o_light_label" />
+                                        <field name="screenshot_initial_box" style="width: 10%" />
+                                        <label for="screenshot_image_timeout" class="col-6 o_light_label" />
+                                        <field name="screenshot_image_timeout" style="width: 49%" />
+                                        <label for="screenshot_partners" class="col-6 o_light_label" />
+                                        <field name="screenshot_partners" style="width: 49%" widget="many2many_tags"/>
+                                        <br/>
+                                        <div class="col-12 mt-1 mb-1 text-white bg-dark" >Header</div>
+                                        <label for="screenshot_feedback_name" class="col-6 o_light_label" />
+                                        <field name="screenshot_feedback_name" style="width: 49%" />
+                                        <label for="screenshot_screenshot" class="col-6 o_light_label" />
+                                        <field name="screenshot_screenshot" style="width: 49%" />
+                                        <br/>
+                                        <div class="col-12 mt-1 mb-1 text-white bg-dark" >Feedback Form</div>
+                                        <label for="screenshot_feedback_detail" class="col-6 o_light_label" />
+                                        <field name="screenshot_feedback_detail" style="width: 49%" />
+                                        <label for="screenshot_desc_note" class="col-6 o_light_label" />
+                                        <field name="screenshot_desc_note" style="width: 49%" />
+                                        <label for="screenshot_email_req_name" class="col-6 o_light_label" />
+                                        <field name="screenshot_email_req_name" style="width: 49%" />
+                                        <label for="screenshot_email_warn" class="col-6 o_light_label" />
+                                        <field name="screenshot_email_warn" style="width: 49%" />
+                                        <label for="screenshot_desc_req_name" class="col-6 o_light_label" />
+                                        <field name="screenshot_desc_req_name" style="width: 49%" />
+                                        <label for="screenshot_desc_warn" class="col-6 o_light_label" />
+                                        <field name="screenshot_desc_warn" style="width: 49%" />
+                                        <br/>
+                                        <div class="col-12 mt-1 mb-1 text-white bg-dark" >Detail Area</div>
+                                        <label for="screenshot_drag_note" class="col-6 o_light_label" />
+                                        <field name="screenshot_drag_note" style="width: 49%" />
+                                        <label for="screenshot_error_msg" class="col-6 o_light_label" />
+                                        <field name="screenshot_error_msg" style="width: 49%" />
+                                        <label for="screenshot_sucess_msg" class="col-6 o_light_label" />
+                                        <field name="screenshot_sucess_msg" style="width: 49%" />
+                                        <br/>
+                                        <div class="col-12 mt-1 mb-1 text-white bg-dark" >Button Area</div>
+                                        <label for="screenshot_highlight" class="col-6 o_light_label" />
+                                        <field name="screenshot_highlight" style="width: 49%" />
+                                        <label for="screenshot_highlight_detail" class="col-6 o_light_label" />
+                                        <field name="screenshot_highlight_detail" style="width: 49%" />
+                                        <label for="screenshot_black_out" class="col-6 o_light_label" />
+                                        <field name="screenshot_black_out" style="width: 49%" />
+                                        <label for="screenshot_black_out_detail" class="col-6 o_light_label" />
+                                        <field name="screenshot_black_out_detail" style="width: 49%" />
+                                        <label for="screenshot_next" class="col-6 o_light_label" />
+                                        <field name="screenshot_next" style="width: 49%" />
+                                        <label for="screenshot_back" class="col-6 o_light_label" />
+                                        <field name="screenshot_back" style="width: 49%" />
+                                        <label for="screenshot_submit" class="col-6 o_light_label" />
+                                        <field name="screenshot_submit" style="width: 49%" />
+                                        <label for="screenshot_ok" class="col-6 o_light_label" />
+                                        <field name="screenshot_ok" style="width: 49%" />
+                                        <br/>
+                                        <div class="col-12 mt-1 mb-1 text-white bg-dark" >Additional Data Area</div>
+                                        <label for="screenshot_description" class="col-6 o_light_label" />
+                                        <field name="screenshot_description" style="width: 49%" />
+                                        <label for="screenshot_additional_info" class="col-6 o_light_label" />
+                                        <field name="screenshot_additional_info" style="width: 49%" />
+                                        <label for="screenshot_browser_info" class="col-6 o_light_label" />
+                                        <field name="screenshot_browser_info" style="width: 49%" />
+                                        <label for="screenshot_page_info" class="col-6 o_light_label" />
+                                        <field name="screenshot_page_info" style="width: 49%" />
+                                        <label for="screenshot_page_structure" class="col-6 o_light_label" />
+                                        <field name="screenshot_page_structure" style="width: 49%" />
+                                        <br/>
+                                        <div class="col-12 mt-1 mb-1 text-white bg-dark" >Mail (CC) Configuration</div>
+                                        <label for="screenshot_is_private" class="col-6 o_light_label" />
+                                        <field name="screenshot_is_private" style="width: 49%" />
+                                        <label for="screenshot_private_email_request" class="col-6 o_light_label" />
+                                        <field name="screenshot_private_email_request" style="width: 49%" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

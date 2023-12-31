@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="mail_channel_view_form_lang" model="ir.ui.view">
+            <field name="name">mail.channel.form.lang</field>
+            <field name="model">mail.channel</field>
+            <field name="inherit_id" ref="mail.mail_channel_view_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='description']" position="after">
+            		<label for="language" />
+                    <div class="o_row">
+                        <field name="language" options="{'no_create': True}"/>
+                        <button
+                            type="action"
+                            name="%(base.res_lang_act_window)d"
+                            class="btn-sm btn-link mb4 fa fa-globe"
+                            aria-label="More languages"
+                            title="More languages"/>
+                    </div>
+                    <field name="translation_color" widget="color"/>
+            	</xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

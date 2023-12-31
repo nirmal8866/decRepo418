@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_screenshot_feedback_tree" model="ir.ui.view">
+        <field name="name">screenshort.feedback.tree</field>
+        <field name="model">screenshort.feedback</field>
+        <field name="arch" type="xml">
+            <tree string="Analytic Defaults" create="0" edit="0">
+                <field name="url" />
+                <field name="email" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_screenshot_feedback_form" model="ir.ui.view">
+        <field name="name">screenshort.feedback.form</field>
+        <field name="model">screenshort.feedback</field>
+        <field name="arch" type="xml">
+            <form string="Analytic Defaults" create="0" edit="0">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="email" widget="email" />
+                            <field name="user" />
+                            <field name="note" />
+                            <field name="is_private" />
+                            <field name="private_emails" invisible="is_private == False"/>
+                        </group>
+                        <group>
+                            <field name="url" widget="url" />
+                            <field name="created_date" widget="date" />
+                            <field name="browser" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="html" string="Screenshot">
+                            <field name="binary_related_store" widget="image" />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_screenshot_feedback" model="ir.actions.act_window">
+        <field name="name">Screenshot Feedback</field>
+        <field name="res_model">screenshort.feedback</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_screenshot_feedback" action="action_screenshot_feedback" name="Feedback"
+        parent="base.menu_administration" />
+</odoo>
